@@ -1,3 +1,74 @@
+/* left border to whole HTML */
 html {
-     
+     border-left: 5px solid lightgray;
+}
+
+body {
+     min-height: 100vh; /* body to be as tall as the viewport (vh = viewport height) */
+     font-family: Arial, Helvetica, sans-serif;
+     max-width: 1000px; /* limits the width of the content */
+     margin: auto;
+}
+
+header, main, footer {
+     padding: 1rem 2rem; /* 1 root element for top/bottom, 2 for left/right */
+}
+
+h1 {
+     color: tomato;
+}
+
+img {
+     width: 100%; /* scales to width of the container */
+}
+
+nav ul {
+     list-style-type: none; /* to remove bullet points */
+     padding: 0;
+     display: flex;
+}
+
+nav[aria-label="Top Nav"] ul {
+     justify-content: space-between; /* space between the listed items*/
+}
+
+nav[aria-label="Top Nav"] a {
+     color: lightgray;
+     text-decoration: none; /* removes underline! */
+}
+
+nav[aria-label="Footer Nav"] ul {
+     justify-content: center; /* centers the items*/
+     gap: 1rem; /* spacing between the items */
+}
+
+nav[aria-label="Footer Nav"] a {
+     color: tomato;
+     text-decoration: none;
+}
+
+article h1 {
+     font-size: 2rem;
+}
+
+article {
+     margin-bottom: 4rem;
+}
+article p::first-letter {
+     font-size: 2rem;
+     font-weight: bold;
+     color: lightgray;
+}
+
+footer p {
+     text-align: center;
+     color: lightgray;
+}
+
+.continues {
+     display: block;
+     text-align: right;
+     font-weight: bold;
+     text-decoration: none;
+     color: tomato;
 }
