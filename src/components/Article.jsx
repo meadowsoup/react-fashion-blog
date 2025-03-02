@@ -1,18 +1,16 @@
+import React from "react";
 
 
-
-function Article(props) {
-     console.log(props);
-     
+function Article({ date, title, image, content }) {     
      return (
           <article>
-               <h1>Article</h1>
-               <h2>{props.title}</h2>
-               <h2>{props.date}</h2>
+               <h1>{title}</h1>
+               <h2>{date}</h2>
 
-               <img src={props.img}  />
+               <img src={image} alt={title}  />
 
-               <p>{props.content}</p>
+               <p>{content}</p>
+               <a href="#" className="continues">Continues ...</a>
           </article>
      );
 }

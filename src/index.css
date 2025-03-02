@@ -1,68 +1,74 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* left border to whole HTML */
+html {
+  border-left: 5px solid lightgray;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; /* body to be as tall as the viewport (vh = viewport height) */
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1000px; /* limits the width of the content */
+  margin: auto;
+}
+
+header, main, footer {
+  padding: 1rem 2rem; /* 1 root element for top/bottom, 2 for left/right */
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: tomato;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+img {
+  width: 100%; /* scales to width of the container */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+nav ul {
+  list-style-type: none; /* to remove bullet points */
+  padding: 0;
+  display: flex;
+}
+
+nav[aria-label="Top Nav"] ul {
+  justify-content: space-between; /* space between the listed items*/
+}
+
+nav[aria-label="Top Nav"] a {
+  color: lightgray;
+  text-decoration: none; /* removes underline! */
+}
+
+nav[aria-label="Footer Nav"] ul {
+  justify-content: center; /* centers the items*/
+  gap: 1rem; /* spacing between the items */
+}
+
+nav[aria-label="Footer Nav"] a {
+  color: tomato;
+  text-decoration: none;
+}
+
+article h1 {
+  font-size: 2rem;
+}
+
+article {
+  margin-bottom: 4rem;
+}
+article p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: lightgray;
+}
+
+footer p {
+  text-align: center;
+  color: lightgray;
+}
+
+.continues {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  text-decoration: none;
+  color: tomato;
 }

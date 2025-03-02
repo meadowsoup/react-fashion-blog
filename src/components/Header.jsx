@@ -1,13 +1,17 @@
-
-
+import React from "react";
+import Nav from "./Nav"
 
 
 function Header() {
      return (
           <>
-               <h1 style={{size: }}>Sartre's List</h1>
+          <header>
+               <h1>Sartre's List</h1>
+               <h2>Better-Dressed People</h2>
+               <Nav />
+          </header>
           </>
-     )
+     );
 }
 
 
